@@ -1,0 +1,115 @@
+<div>
+    <app-header></app-header>
+    <div>
+        <div class="heading">
+            <h2>Weather Report</h2>
+        </div>
+        <div class="container searchbox">
+            <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+                <div class="input-group">
+                    <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1"
+                        class="form-control border-0 bg-light searchinput" [(ngModel)]="getlocation">
+                    <div class="input-group-append">
+                        <button id="button-addon1" type="submit" class="btn btn-link text-primary" (click)="Search()"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin: 20px auto;">
+            <div class="card dashboard">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <circle-progress [percent]="temppercent" [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300"></circle-progress>
+                            <label>
+                                <p>{{temperature}}</p>
+                                <b>Temperature</b>
+                            </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <circle-progress [percent]="humiditypercent" [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300"></circle-progress>
+                            <label>
+                                <p>{{pressure}}</p>
+                                <b>Pressure</b>
+                            </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <circle-progress [percent]="pressurepercent" [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300"></circle-progress>
+                            <label style="margin-left: 100px;">
+                                <p>{{humidity}}</p>
+                                <b>Humidity</b>
+                            </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <circle-progress [percent]="windpercent" [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300"></circle-progress>
+                            <label style="margin-left: 100px;">
+                                <p>{{windspeed}}</p>
+                                <b>Wind Speed</b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!-- <div class="page-content page-container" id="page-content">
+                <div class="padding">
+                    <div class="row container d-flex justify-content-center">
+                        <div class="col-lg-8 grid-margin stretch-card">
+                            <div class="card card-weather">
+                                <div class="card-body">
+                                    <div class="weather-date-location">
+                                        <h3>{{day}}</h3>
+                                        <p class="text-gray"> <span
+                                                class="weather-date">{{date}}</span>&nbsp;&nbsp;&nbsp; <span
+                                                class="weather-location">{{location}}</span> </p>
+                                    </div>
+                                    <div class="weather-data d-flex">
+                                        <div class="mr-auto">
+                                            <h4 class="display-3">{{temp}} <span class="symbol">°</span>C</h4>
+                                            <p> {{weather}} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="d-flex weakly-weather">
+                                        <div class="weakly-weather-item">
+                                            <p class="mb-0"> Sun </p> <i class="mdi mdi-weather-cloudy"></i>
+                                            <p class="mb-0"> {{sunday}}° </p>
+                                        </div>
+                                        <div class="weakly-weather-item">
+                                            <p class="mb-1"> Mon </p> <i class="mdi mdi-weather-hail"></i>
+                                            <p class="mb-0"> {{monday}}° </p>
+                                        </div>
+                                        <div class="weakly-weather-item">
+                                            <p class="mb-1"> Tue </p> <i class="mdi mdi-weather-partlycloudy"></i>
+                                            <p class="mb-0"> {{tuesday}}° </p>
+                                        </div>
+                                        <div class="weakly-weather-item">
+                                            <p class="mb-1"> Wed </p> <i class="mdi mdi-weather-pouring"></i>
+                                            <p class="mb-0"> {{wednesday}}° </p>
+                                        </div>
+                                        <div class="weakly-weather-item">
+                                            <p class="mb-1"> Thu </p> <i class="mdi mdi-weather-pouring"></i>
+                                            <p class="mb-0"> {{thursday}}° </p>
+                                        </div>
+                                        <div class="weakly-weather-item">
+                                            <p class="mb-1"> Fri </p> <i class="mdi mdi-weather-snowy-rainy"></i>
+                                            <p class="mb-0"> {{friday}}° </p>
+                                        </div>
+                                        <div class="weakly-weather-item">
+                                            <p class="mb-1"> Sat </p> <i class="mdi mdi-weather-snowy"></i>
+                                            <p class="mb-0"> {{saturday}}° </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
